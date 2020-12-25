@@ -6,10 +6,10 @@
 import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import linkage, dendrogram
 mergings = linkage(samples, method = ‘complete’)
-dendrogram(mergings,
-			labels = country_names,
-			leaf_rotation = 90,
-			leaf_font_size = 6)
+dendrogram(mergings, 
+	   labels = country_names,
+	   leaf_rotation = 90,
+	   leaf_font_size = 6)
 plt.show()
 
 
@@ -32,7 +32,6 @@ plt.show()
 
 
 
-
 #Hierarchies of stocks
 # Import normalize
 from sklearn.preprocessing import normalize
@@ -52,19 +51,17 @@ plt.show()
 
 
 
-
-Dendrograms show cluster distances
-	•	Height on dendrogram = distance between merging clusters
-	•	E.g. clusters with only Cyprus and Greece had distance approx. 6
-	•	This new cluster distance approx. 12 from cluster with only Bulgaria
-
+#Dendrograms show cluster distances
+# • Height on dendrogram = distance between merging clusters
+# • E.g. clusters with only Cyprus and Greece had distance approx. 6
+# • This new cluster distance approx. 12 from cluster with only Bulgaria
 
 
 
-Distance between clusters
-	•	Defined by a “linkage method”
-	•	In “complete” linkage: distance between clusters is max. distance between their samples
-	•	Specified via method parameter, e.g. linkage(samples, method = ‘complete’)
+#Distance between clusters
+# • Defined by a “linkage method”
+# • In “complete” linkage: distance between clusters is max. distance between their samples
+# • Specified via method parameter, e.g. linkage(samples, method = ‘complete’)
 
 
 
@@ -85,10 +82,9 @@ plt.show()
 
 
 
-
-Extracting cluster labels using fcluster
-	•	Use the fcluster() function
-	•	Returns a NumPy array of cluster labels
+#Extracting cluster labels using fcluster
+# • Use the fcluster() function
+# • Returns a NumPy array of cluster labels
 
     
 from scipy.cluster.hierarchy import linkage
@@ -113,12 +109,12 @@ ct = pd.crosstab(df['labels'], df['varieties'])
 # Display ct
 print(ct)
 
-Output:
-varieties  Canadian wheat  Kama wheat  Rosa wheat
-labels                                           
-1   14  3   0
-2   0   0   14
-3   0   11  0
+#Output:
+#varieties  Canadian wheat  Kama wheat  Rosa wheat
+#labels                                           
+#  1   		14		3	     0
+#  2   		0     		0   	     14
+#  3   		0     		11           0
 
 
 #Aligning cluster labels with country names
@@ -129,11 +125,11 @@ print(pairs.sort_values(‘labels’))
 
 
 
-t-SNE for 2-dimensional maps
-	•	t-SNE = ’t-distributed stochastic neighbor embedding’
-	•	Maps samples to 2D space (or 3D)
-	•	Map approximately preserves nearness of samples
-	•	Great for inspecting datasets
+#t-SNE for 2-dimensional maps
+# • t-SNE = ’t-distributed stochastic neighbor embedding’
+# • Maps samples to 2D space (or 3D)
+# • Map approximately preserves nearness of samples
+# • Great for inspecting datasets
 
 #t-SNE in sklearn
 import matplotlib.pyplot as plt
@@ -145,22 +141,22 @@ ys = transformed[:,1]
 plt.scatter(xs, ys, c = species)
 plt.show()
 
-t-SNE has only fit_transform()
-	•	Has a fit_transform() method
-	•	Simultaneously fits the model and transforms the data
-	•	Has no separate fit() or transform() methods
-	•	Can’t extend the map to include new data samples
-	•	Must start over each time
+#t-SNE has only fit_transform()
+# • Has a fit_transform() method
+# • Simultaneously fits the model and transforms the data
+# • Has no separate fit() or transform() methods
+# • Can’t extend the map to include new data samples
+# • Must start over each time
 
-t-SNE learning rate
-	•	Choose learning rate for the dataset
-	•	Wrong choice: points bunch together
-	•	It’s enough to try values between 50 and 200
+#t-SNE learning rate
+# • Choose learning rate for the dataset
+# • Wrong choice: points bunch together
+# • It’s enough to try values between 50 and 200
 
-Different every time
-	•	t-SNE features are different every time
-	•	Piedmont wines, 3 runs, 3 different scatter plots
-	•	…however: The wine varieties (=colors) have same position relative to one another
+#Different every time
+# • t-SNE features are different every time
+# • Piedmont wines, 3 runs, 3 different scatter plots
+# • …however: The wine varieties (=colors) have same position relative to one another
 
 
 
