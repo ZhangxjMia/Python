@@ -7,7 +7,7 @@
 * Clustering for dataset exploration
 
 ## Supervised Learning
-> **Supervised Learning with scikit-learn** on DataCamp
+> **Supervised Learning with Scikit-Learn** on DataCamp
 * Preprocessing and Pipelines
 * Classification
 * Regression
