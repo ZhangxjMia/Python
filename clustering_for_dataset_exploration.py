@@ -168,6 +168,7 @@ ct = pd.crosstab(df[‘labels’], df[‘varieties’])
 #* Features are said to be ‘standardized’
 ￼
 
+
 #sklearn StandardScaler
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
