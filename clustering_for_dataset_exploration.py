@@ -145,8 +145,7 @@ model = KMeans(n_clusters = 3)
 labels = model.fit_predict(samples)
 
 #Clusters vs. varieties
-df = pd.DataFrame({‘labels’ : labels,
-				     ‘varieties’ : varieties})
+df = pd.DataFrame({‘labels’ : labels, ‘varieties’ : varieties})
 ct = pd.crosstab(df[‘labels’], df[‘varieties’])
 
 #Output:
