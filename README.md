@@ -19,7 +19,7 @@ ct = pd.crosstab(df[‘labels’], df[‘varieties’])
 ```
 
 ## Supervised Learning
-> **Supervised Learning with Scikit-Learn** on DataCamp
+> **Supervised Learning with Scikit-Learn** on DataCamp.
 * Preprocessing and Pipelines
 * Classification
 * Regression
