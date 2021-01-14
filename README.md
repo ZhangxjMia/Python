@@ -55,3 +55,17 @@ print(classification_report(y_test, y_pred))
 
 ## Exploratory Data Analysis (EDA)
 > Generoal process of EDA
+
+#### Code Example
+```Python
+sns.set(style = 'darkgrid')
+sns.barplot(mean_price.index, mean_price['price'], alpha = 1)
+plt.title('Avg. Price for each Auto Brand', fontsize=18)
+plt.ylabel('Avg. of Price', fontsize=18)
+plt.xlabel('Auto Brand', fontsize=18)
+plt.xticks(fontsize=14, rotation = 75)
+fig = plt.gcf()
+fig.set_size_inches(10, 8)
+#plt.grid()
+plt.show()
+```
