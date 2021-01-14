@@ -54,7 +54,7 @@ print(classification_report(y_test, y_pred))
 ```
 
 ## Exploratory Data Analysis (EDA)
-> Generoal process of EDA
+> General process of EDA.
 
 #### Code Example
 ```Python
