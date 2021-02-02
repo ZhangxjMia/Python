@@ -54,7 +54,17 @@ print(classification_report(y_test, y_pred))
 ```
 
 ## Exploratory Data Analysis (EDA)
-> General process of EDA (updating).
+> General process of EDA.
+* Import libraries & dataset.
+* Basic data exploration.
+        * Data Type
+* EDA
+        * Handling missing values
+        * Bivariate Analysis
+        * Remove duplicates
+        * Outlier Treatment
+        * Normalization & Scaling
+        * Encoding
 
 #### Code Example
 ```Python
